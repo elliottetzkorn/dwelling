@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'Garamond';
+    src: url('garamond.ttf') format('truetype');
+}
+
+* {
+    font-family: 'Garamond', sans-serif;
+    font-weight: normal;
+}
+
+body {
+    margin: 0.5rem;
+}
+
+h1 {
+    margin-bottom: 0.5rem;
+    /* Adjust this value to change the spacing */
+}
+
+p {
+    margin: 0;
+}
+
+img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+#image-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns on small screens */
+    grid-gap: 1px;
+}
+
+@media (min-width: 640px) {
+
+    /* Tailwind's sm breakpoint */
+    #image-container {
+        grid-template-columns: repeat(4, 1fr);
+        /* 4 columns on medium screens */
+    }
+}
+
+@media (min-width: 1024px) {
+
+    /* Tailwind's lg breakpoint */
+    #image-container {
+        grid-template-columns: repeat(8, 1fr);
+        /* 8 columns on large screens */
+    }
+}
