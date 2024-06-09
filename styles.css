@@ -4,8 +4,8 @@
 }
 
 @font-face {
-    font-family: 'Geneva';
-    src: url('geneva.ttf') format('truetype');
+    font-family: 'Source';
+    src: url('source.ttf') format('truetype');
 }
 
 @font-face {
@@ -22,15 +22,15 @@ body {
 }
 
 h1 {
-    font-family: 'Garamond', sans-serif;
-    margin-bottom: 0rem;
+    font-family: 'Garamond', serif;
+    margin-bottom: 0.5rem;
     font-size: 3rem;
     margin-top: 1rem;
     font-weight: normal;
 }
 
 p {
-    font-family: 'Geneva', sans-serif;
+    font-family: 'Source', sans-serif;
     margin: 0;
 }
 
@@ -56,13 +56,13 @@ button {
     grid-gap: 4px;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 768px) {
     #image-container {
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
 
     #image-container {
         grid-template-columns: repeat(8, 1fr);
