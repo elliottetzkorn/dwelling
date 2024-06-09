@@ -64,7 +64,8 @@
 
                 paragraph.appendChild(document.createElement('br'));
 
-                var location = document.createElement('small');
+                var location = document.createElement('span');
+                location.style.fontWeight = '300';
                 var city = document.createTextNode(room['city_name']);
                 location.appendChild(city);
 
@@ -79,8 +80,6 @@
                 paragraph.appendChild(location);
 
                 if (room['caption'] != null) {
-                    paragraph.appendChild(document.createElement('br'));
-
                     paragraph.appendChild(document.createElement('br'));
                     var caption = document.createElement('i');
                     caption.textContent = '"' + room['caption'] + '"';
