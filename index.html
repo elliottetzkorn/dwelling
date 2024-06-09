@@ -55,6 +55,11 @@
                 img.src = smallImage;
                 img.loading = 'lazy';
 
+                var a = document.createElement('a');
+                a.href = largeImage;
+                a.target = '_blank';
+                a.appendChild(img);
+
                 var paragraph = document.createElement('p');
                 var div = document.createElement('div');
 
@@ -84,19 +89,10 @@
                     var caption = document.createElement('i');
                     caption.textContent = '"' + room['caption'] + '"';
                     paragraph.appendChild(caption);
-
                 }
 
-                var link = document.createElement('a');
-                link.href = largeImage;
-                link.textContent = 'Full size';
-                link.target = '_blank';
-
-
-
                 div.appendChild(paragraph);
-                div.appendChild(document.createElement('br'));
-                div.appendChild(link);
+
 
                 if (room['email'] != null) {
                     var emailLink = document.createElement('a');
@@ -110,7 +106,7 @@
 
 
 
-                container.appendChild(img);
+                container.appendChild(a);
                 container.appendChild(div);
             }
         }
