@@ -3,9 +3,18 @@
     src: url('garamond.ttf') format('truetype');
 }
 
-* {
-    font-family: 'Garamond', sans-serif;
-    font-weight: normal;
+@font-face {
+    font-family: 'Geneva';
+    src: url('geneva.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Chicago';
+    src: url('chicago.ttf') format('truetype');
+}
+
+html {
+    background-color: oldlace;
 }
 
 body {
@@ -13,12 +22,21 @@ body {
 }
 
 h1 {
-    margin-bottom: 0.5rem;
-    /* Adjust this value to change the spacing */
+    font-family: 'Garamond', sans-serif;
+    margin-bottom: 0rem;
+    font-size: 3rem;
+    margin-top: 1rem;
+    font-weight: normal;
 }
 
 p {
+    font-family: 'Geneva', sans-serif;
     margin: 0;
+}
+
+a {
+    font-family: 'Chicago', sans-serif;
+    font-size: 15px;
 }
 
 img {
@@ -31,24 +49,18 @@ img {
 #image-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* 2 columns on small screens */
-    grid-gap: 1px;
+    grid-gap: 4px;
 }
 
 @media (min-width: 640px) {
-
-    /* Tailwind's sm breakpoint */
     #image-container {
         grid-template-columns: repeat(4, 1fr);
-        /* 4 columns on medium screens */
     }
 }
 
 @media (min-width: 1024px) {
 
-    /* Tailwind's lg breakpoint */
     #image-container {
         grid-template-columns: repeat(8, 1fr);
-        /* 8 columns on large screens */
     }
 }
