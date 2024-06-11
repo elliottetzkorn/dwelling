@@ -29,6 +29,11 @@ h1 {
     font-weight: normal;
 }
 
+h2 {
+    font-family: 'Garamond', serif;
+    font-weight: normal;
+}
+
 p {
     font-family: 'Source', sans-serif;
     margin: 0;
@@ -38,6 +43,11 @@ a {
     font-family: 'Chicago', sans-serif;
     font-size: 14px;
 }
+
+#room-type {
+    text-align: center;
+    text-decoration: underline;
+  }
 
 button {
     font-family: 'Source', sans-serif;
